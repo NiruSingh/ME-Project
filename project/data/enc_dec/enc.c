@@ -107,11 +107,11 @@ long find_len(FILE *ptr, char *addr)
 
 int hex2_dec(char *hexString)
 {
-	int i, length = 3;
-	const int base = 16;
-	int decimalNumber = 0;
+	int i, length=3;
+	const int base=16;
+	int decimalNumber=0;
 
-	for (i = 0; *hexString != '\0' && i < length; i++, hexString++)
+	for (i=0; *hexString!='\0' && i<length; i++, hexString++)
 	{
 		if (*hexString >= 48 && *hexString <= 57)
 			decimalNumber += (((int)(*hexString)) - 48) * pow(base, length - i - 1);
@@ -134,7 +134,7 @@ int main()
 	ptr_loc=fopen("locations1.txt","r");
 	ptr_dump=fopen("objdump.txt","r");
 	ptr_bin=fopen("simple2","rb+");
-	ptr_bin_r=fopen("simple2","rb");
+	ptr_bin_r=fopen("simple","rb");
 	ptr_len_off=fopen("len_off.txt","w+");
 	ptr_data=fopen("data.txt","w+");
 
@@ -169,7 +169,7 @@ int main()
 		
 		// write to data.txt
 		for(i=0;i<len;i++)
-			fprintf(ptr_data, "%x", data[i]);
+			fprintf(ptr_data, " %x", data[i]);
 		fprintf(ptr_data, "%c", '\n');
 
 		// write to len_off.txt
