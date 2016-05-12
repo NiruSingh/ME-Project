@@ -1,0 +1,3 @@
+gdb -x f.txt -q simple >> assembly.txt
+gdb -x f.txt -q simple | grep esp >> locations.txt
+disas /r main		// to get opcodes along with assembly

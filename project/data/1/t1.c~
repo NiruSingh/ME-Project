@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<malloc.h>
+#include <string.h>
+int main(int argc, char *argv[])
+{
+	char *buf;
+	buf = (char*) malloc(256);
+	printf("111111111111111 %u\n",buf);
+	printf("111111111111111 %s\n",argv[1]);
+	printf("%d\n",argc);
+	memcpy(buf,argv[1],strlen(argv[1]));
+	printf("111111111111111 %s\n",buf);
+	printf(buf);
+
+}

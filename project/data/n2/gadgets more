@@ -1,0 +1,4 @@
+b7e20000-b7fc4000 r-xp 00000000 08:01 1049485    /lib/i386-linux-gnu/libc-2.15.so
+
+0x179a31L: pop edi ; add [eax] al ; pop esp ;;
+add=b7f99a31

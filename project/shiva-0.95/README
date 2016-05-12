@@ -1,0 +1,131 @@
+
+shiva - Encrypt ELF Executables
+
+Neel Mehta   
+Shaun Clowes  
+
+Email: shiva@securereality.com.au
+
+Contents
+--------
+
+1. Introduction
+2. What's in this distribution?
+3. Limitations of shiva
+4. Using shiva
+5. Contacts
+6. Feedback
+
+Introduction
+------------
+
+This is the first public release of shiva, a tool to encrypt ELF
+executables under Linux. shiva can be used to wrap an executable in such
+a way that though it continues to run as it did before it is very
+difficult to debug or reverse engineer. shiva can be used to password
+protect critical programs (including setuid programs) or simply to
+obfuscate sensitive data stored within programs. 
+
+shiva was first released at CanSecWest '03.
+
+What's in this distribution?
+----------------------------
+
+This distribution contains a copy of shiva encrypted with shiva. It
+should work on most Linux machines (we haven't had problems on any of our
+test machines). 
+
+Limitations of shiva
+--------------------
+
+Let us make one point abundantly clear:
+
+    If you can run a shiva encrypted executable, you can 
+                      "decrypt" it. 
+
+That could be rephrased to:
+
+    A sufficiently determined attacker that has the password
+       to a shiva encrypted executable will be able to 
+  discover anything you're attempting to hide in the executable
+
+We're not suggesting it's easy, but it is possible.
+
+At this stage, the following sorts of executables cannot be correctly
+encrypted by shiva:
+
+    - Executables without section headers
+    - Programs that use vfork()
+    - Multi-threaded programs
+    - Static executables that call fork()
+    - Executables that go on to exec set(ug)id programs 
+
+None of these limitations are permanently binding, we'll try to remove them
+in the version. 
+
+This version of shiva is very much a work in progress, there are probably
+all sorts of problems with it. We make absolutely no guarantee about its
+quality, fitness for purpose etc. See disclaimer at the end of this
+document.
+
+Using shiva
+-----------
+
+There really isn't much to say about using shiva. Simply run it with
+the name of the executable you wish to encrypt and a new executable, by
+default <exec>.shiva will be created. For example:
+
+    [shiva@shiva shiva-0.95]$ ./shiva /bin/ls
+    [shiva@shiva shiva-0.95]$ ./ls.shiva
+    README  ls.shiva  shiva
+
+If you like you can apply a password to the executable using the -p
+option:
+
+    [shiva@shiva shiva-0.95]$ ./shiva -p /bin/ls
+    Password:
+    [shiva@shiva shiva-0.95]$ ./ls.shiva
+    Password:
+    README  ls.shiva  shiva
+    [shiva@shiva shiva-0.95]$ ./ls.shiva
+    Password:
+    [shiva@shiva shiva-0.95]$ 
+
+You can also use the -o option to specify the name of the output file:
+
+    [shiva@shiva shiva-0.95]$ ./shiva -o newls /bin/ls
+    [shiva@shiva shiva-0.95]$ ./newls
+    README  ls.shiva  newls  shiva
+    [shiva@shiva shiva-0.95]$
+
+Feedback
+--------
+
+We're very interested in any (constructive) feedback on shiva, feel free
+to email us at shiva@securereality.com.au
+
+Disclaimer
+----------
+
+Borrowed from the GPL:
+
+BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR
+THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE
+ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.
+SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY
+SERVICING, REPAIR OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR
+DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING
+BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR
+LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO
+OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS
+BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+

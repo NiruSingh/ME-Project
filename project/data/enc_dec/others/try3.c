@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+ 
+int convertToDecimal(char*);
+ 
+int main()
+{
+    char hex[3]="3ff";
+    printf("%d",convertToDecimal(hex));
+    return 0;
+}
+ 
+int convertToDecimal(char *hexString)
+{
+    int i, length = 3;
+    const int base = 16; // Base of Hexadecimal Number
+    int decimalNumber = 0;
+
+    for (i = 0; *hexString != '\0' && i < length; i++, hexString++)
+    {
+        // Compare *hexString with ASCII values
+        if (*hexString >= 48 && *hexString <= 57)   // is *hexString Between 0-9
+            decimalNumber += (((int)(*hexString)) - 48) * pow(base, length - i - 1);
+        else
+        {
+            decimalNumber += (((int)(*hexString)) - 87) * pow(base, length - i - 1);
+        }
+    }
+    return decimalNumber;
+}
