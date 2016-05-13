@@ -1,3 +1,11 @@
 gdb -x f.txt -q simple >> assembly.txt
 gdb -x f.txt -q simple | grep esp >> locations.txt
 disas /r main		// to get opcodes along with assembly
+objdump -d simple >> location.txt
+
+
+
+// for operation.so
+gcc -c -Wall -Werror -fpic operation.c
+gcc -shared -o liboperation.so operation.o
+gcc -L/home/niru/Documents/ME-Project/project/data/enc_dec/ -Wl,-rpath=/home/niru/Documents/ME-Project/project/data/enc_dec/ -Wall -o prog prog.c -loperation -lm

@@ -4,8 +4,8 @@
 
 int sub_hexs(int *a1, int *a2)
 {
-	int i, diff[3];
-	for(i=2;i>=0;i--)
+	int i, diff[7];
+	for(i=6;i>=0;i--)
 	{
 		if(a2[i]<a1[i])
 		{
@@ -15,14 +15,14 @@ int sub_hexs(int *a1, int *a2)
 		else
 			diff[i]=a2[i]-a1[i];
 	}
-	return diff[2];
+	return diff[6];
 }
 
 int calculate_len(char *off1, char *off2)
 {
-	int i, diff, len, off_int1[3], off_int2[3];
+	int i, diff, len, off_int1[7], off_int2[7];
 
-	for(i=0;i<3;i++)
+	for(i=0;i<7;i++)
 	{	
 		switch(off1[i])
 		{
@@ -68,7 +68,7 @@ long find_len(FILE *ptr, char *addr)
 {
 	int i=0;
 	unsigned long off_int1, off_int2, len;
-	char tmp[100],off1[4],off2[4],ch;
+	char tmp[100],off1[7],off2[7],ch;
 	FILE *ptr2;
 	while(1)
 	{
@@ -76,8 +76,8 @@ long find_len(FILE *ptr, char *addr)
 		if(ch == '\n')
 			continue;
 
-		fread(off1,3,1,ptr);
-		off1[3]='\0';
+		fread(off1,7,1,ptr);
+		off1[7]='\0';
 
 		if(strcmp(addr,off1)==0)
 		{
@@ -87,9 +87,7 @@ long find_len(FILE *ptr, char *addr)
 				ch=fgetc(ptr2);
 			}while(ch != '\n');
 			fseek(ptr2,1,SEEK_CUR);
-			fread(off2,3,1,ptr2);
-			off2[3]='\0';
-
+			fread(off2,7,1,ptr2);
 			return calculate_len(off1,off2);
 		}
 
@@ -126,10 +124,11 @@ int hex2_dec(char *hexString)
 
 int main(int argc, char *argv[])
 {
-	char ch, addr_loc[4], line[100], offset_ar[4];
+	char ch, addr_loc[7], line[100], offset_ar[4];
 	unsigned char data[10];
 	int len, i, offset, ctr;
-	char leave=201;		// byte to replace with
+	char leave[1];
+	leave[0]=201;				// byte to replace with
 	FILE *ptr_loc, *ptr_dump, *ptr_bin, *ptr_bin_r, *ptr_len_off, *ptr_data;
 
 	ptr_loc=fopen("locations.txt","r");
@@ -150,21 +149,19 @@ int main(int argc, char *argv[])
 	{
 		// read address from file locations.txt
 		fseek(ptr_loc,1,SEEK_CUR);
-		fread(addr_loc,3,1,ptr_loc);
-		addr_loc[3]='\0';
+		fread(addr_loc,7,1,ptr_loc);
+		addr_loc[7]='\0';
 		printf("%s\n",addr_loc);
 
 		// find length of instruction to be replaced
 		len=find_len(ptr_dump,addr_loc);
 		rewind(ptr_dump);
-/*
+
 		// convert offset to decimal
 		memcpy(offset_ar,&addr_loc[4], 3);
 		offset_ar[4] = '\0';
 		offset=hex2_dec(offset_ar);
-*/
-		offset=hex2_dec(addr_loc);
-		printf("offset=%d, len=%d\n",offset,len);
+		printf("offset=%d, ar=%s, len=%d\n",offset,offset_ar,len);
 
 		// read from binary and update files.
 		fseek(ptr_bin_r,offset,SEEK_SET);
@@ -184,17 +181,14 @@ int main(int argc, char *argv[])
 
 		rewind(ptr_bin_r);
 
-
 		// replacement in binary file
 		fseek(ptr_bin,offset,SEEK_SET);
 		ctr=len;
-
 		while(ctr--)
-			fprintf(ptr_bin,"%c",leave);
-			//fwrite(&leave, sizeof(unsigned char), 1, ptr_bin);
+			fwrite(leave, sizeof(char), 1, ptr_bin);
 		rewind(ptr_bin);
 
-		exit(1);
+//		exit(1);
 
 		do
 		{

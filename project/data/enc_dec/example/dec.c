@@ -6,6 +6,9 @@ int hex2_dec(char *hexString)
 	int i, length=0, decimalNumber=0;
 	const int base=16;
 
+	if(hexString[1]=='\n')
+		hexString[1]='\0';
+
 	for (hex = hexString; *hex!='\0'; hex++)
 		length++;
 
@@ -51,11 +54,6 @@ int main(int argc, char *argv[])
 			fseek(ptr_data,1,SEEK_CUR);
 			fread(data,2,1,ptr_data);
 			data[2]='\0';
-			if(data[1]=='\n')
-			{	
-				fseek(ptr_data,-1,SEEK_CUR);
-				data[1]='\0';
-			}
 			towrite[i]=hex2_dec(data);
 
 			// write original data to binary
@@ -64,7 +62,6 @@ int main(int argc, char *argv[])
 			printf("data1=%s data2=%d\n",data,hex2_dec(data));
 			i++;
 		}
-		fseek(ptr_data,1,SEEK_CUR);
 		rewind(ptr_bin);
 
 /*		fseek(ptr_bin,offset,SEEK_SET);

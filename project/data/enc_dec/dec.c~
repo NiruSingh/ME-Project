@@ -6,13 +6,10 @@ int hex2_dec(char *hexString)
 	int i, length=0, decimalNumber=0;
 	const int base=16;
 
-	if(hexString[1]=='\n')
-		hexString[1]='\0';
-
-	for (hex = hexString; *hex != '\0'; hex++)
+	for (hex = hexString; *hex!='\0'; hex++)
 		length++;
 
-	for (i = 0; *hexString != '\0' && i < length; i++, hexString++)
+	for (i=0; *hexString!='\0' && i<length; i++, hexString++)
 	{
 		if (*hexString >= 48 && *hexString <= 57)
 			decimalNumber += (((int)(*hexString)) - 48) * pow(base, length - i - 1);
@@ -23,14 +20,20 @@ int hex2_dec(char *hexString)
 	return decimalNumber;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
 	int len, offset, i;
 	char data[10], towrite[10];
 	FILE *ptr_bin, *ptr_data, *ptr_len_off;
-	ptr_bin=fopen("simple2","rb+");
+	ptr_bin=fopen(argv[1],"rb+");
 	ptr_data=fopen("data.txt","r");
 	ptr_len_off=fopen("len_off.txt","r");
+
+	if(!ptr_bin || !ptr_len_off || !ptr_data)
+	{
+		printf("unable to open files\n");
+		exit(1);
+	}
 
 	while(1)
 	{
@@ -48,6 +51,11 @@ int main()
 			fseek(ptr_data,1,SEEK_CUR);
 			fread(data,2,1,ptr_data);
 			data[2]='\0';
+			if(data[1]=='\n')
+			{	
+				fseek(ptr_data,-1,SEEK_CUR);
+				data[1]='\0';
+			}
 			towrite[i]=hex2_dec(data);
 
 			// write original data to binary
@@ -56,6 +64,7 @@ int main()
 			printf("data1=%s data2=%d\n",data,hex2_dec(data));
 			i++;
 		}
+		fseek(ptr_data,1,SEEK_CUR);
 		rewind(ptr_bin);
 
 /*		fseek(ptr_bin,offset,SEEK_SET);

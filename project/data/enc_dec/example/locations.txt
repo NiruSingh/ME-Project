@@ -1,0 +1,4 @@
+0x80483ffL: add esp 0x4 ; pop ebx ; pop ebp ;;
+0x8048514L: add esp 0x4 ; pop ebx ; pop ebp ;;
+0x8048321L: add esp 0x8 ; pop ebx ;;
+0x8048531L: add esp 0x8 ; pop ebx ;;
