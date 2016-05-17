@@ -1,0 +1,93 @@
+\begin{thebibliography}{10}
+
+\bibitem{aleph}
+Aleph One.
+\newblock Smashing the stack for fun and profit.
+\newblock {\em Phrack magazine}, 7(49):14--16, 1996.
+
+\bibitem{stackguard}
+Crispin Cowan, Steve Beattie, Ryan~Finnin Day, Calton Pu, Perry Wagle, and Erik
+  Walthinsen.
+\newblock Protecting systems from stack smashing attacks with stackguard.
+\newblock In {\em Linux Expo}. Citeseer, 1999.
+
+\bibitem{pax}
+PaX Team.
+\newblock Pax address space layout randomization (aslr), 2003.
+
+\bibitem{4trick}
+Gerardo Richarte et~al.
+\newblock Four different tricks to bypass stackshield and stackguard
+  protection.
+\newblock {\em World Wide Web}, 1, 2002.
+
+\bibitem{effaslr}
+Hovav Shacham, Matthew Page, Ben Pfaff, Eu-Jin Goh, Nagendra Modadugu, and Dan
+  Boneh.
+\newblock On the effectiveness of address-space randomization.
+\newblock In {\em Proceedings of the 11th ACM conference on Computer and
+  communications security}, pages 298--307. ACM, 2004.
+
+\bibitem{hafix}
+Matthias Lucas~Davi, Debayan~Paul Hanreich, Ahmad-Reza Sadeghi, Patrick
+  Koeberl, Dean Sullivan, Orlando Arias, and Yier Jin.
+\newblock Hafix: Hardware-assisted flow integrity extension.
+\newblock 2015.
+
+\bibitem{jitrop}
+Kevin~Z Snow, Fabian Monrose, Lucas Davi, Alexandra Dmitrienko, Christopher
+  Liebchen, and Ahmad-Reza Sadeghi.
+\newblock Just-in-time code reuse: On the effectiveness of fine-grained address
+  space layout randomization.
+\newblock In {\em Security and Privacy (SP), 2013 IEEE Symposium on}, pages
+  574--588. IEEE, 2013.
+
+\bibitem{jop}
+Tyler Bletsch, Xuxian Jiang, Vince~W Freeh, and Zhenkai Liang.
+\newblock Jump-oriented programming: a new class of code-reuse attack.
+\newblock In {\em Proceedings of the 6th ACM Symposium on Information, Computer
+  and Communications Security}, pages 30--40. ACM, 2011.
+
+\bibitem{ropeme}
+Long Le.
+\newblock Payload already inside: datafire-use for rop exploits.
+\newblock {\em Black Hat USA}, 2010.
+
+\bibitem{effcfi}
+Lucas Davi, Daniel Lehmann, Ahmad-Reza Sadeghi, and Fabian Monrose.
+\newblock Stitching the gadgets: On the ineffectiveness of coarse-grained
+  control-flow integrity protection.
+\newblock In {\em USENIX Security Symposium}, 2014.
+
+\bibitem{effaslr64}
+Hector Marco-Gisbert and Ismael Ripoll.
+\newblock On the effectiveness of full-aslr on 64-bit linux, 2014.
+
+\bibitem{aslrguard}
+Kangjie Lu, Chengyu Song, Byoungyoung Lee, Simon~P Chung, Taesoo Kim, and Wenke
+  Lee.
+\newblock Aslr-guard: Stopping address space leakage for code reuse attacks.
+\newblock In {\em Proceedings of the 22nd ACM SIGSAC Conference on Computer and
+  Communications Security}, pages 280--291. ACM, 2015.
+
+\bibitem{secrvw}
+Ahmad-Reza Sadeghi, Lucas Davi, and Per Larsen.
+\newblock Securing legacy software against real-world code-reuse exploits:
+  Utopia, alchemy, or possible future?
+\newblock In {\em Proceedings of the 10th ACM Symposium on Information,
+  Computer and Communications Security}, pages 55--61. ACM, 2015.
+
+\bibitem{memerr}
+Sandeep Bhatkar, R.~Sekar, and Daniel~C. DuVarney.
+\newblock Efficient techniques for comprehensive protection from memory error
+  exploits.
+\newblock In {\em Proceedings of the 14th Conference on USENIX Security
+  Symposium - Volume 14}, SSYM'05, pages 17--17, Berkeley, CA, USA, 2005.
+  USENIX Association.
+
+\bibitem{marlin}
+Arpan Gupta, Jalal Habibi, Michael~S Kirkpatrick, and Elisa Bertino.
+\newblock Marlin: Mitigating code reuse attacks using code randomization.
+\newblock 2015.
+
+\end{thebibliography}
