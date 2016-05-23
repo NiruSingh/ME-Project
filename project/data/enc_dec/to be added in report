@@ -1,0 +1,5 @@
+1. encryption part detail including numbers
+2. past examples of attack to show severity
+3. techniques propsed by others using encryption and go till why ur approach and how it is better (like time of encryption is less and can still achieve same objective), not done online but can be done.
+4. example attack properly include turning off aslr and stack canary
+5. replacement with valid code
