@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.5.14)  24 MAY 2016 01:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.5.14)  2 JUN 2016 03:10
 entering extended mode
  %&-line parsing enabled.
 **me-mid-term-report-template.tex
@@ -206,172 +206,196 @@ Underfull \hbox (badness 7186) in paragraph at lines 113--114
 \OT1/cmr/m/n/10 Although many de-fen-sive so-lu-tions have been
  []
 
+
+Overfull \hbox (10.06242pt too wide) in paragraph at lines 117--117
+[]\OT1/cmr/bx/n/12 Just-In-Time Code Reuse(Offensive) 
+ []
+
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 7081) in paragraph at lines 137--138
+[]\OT1/cmr/m/n/10 This ap-proach has been pro-posed spe-cially
+ []
+
+
+Underfull \hbox (badness 6592) in paragraph at lines 147--148
+\OT1/cmr/m/n/10 with these in-struc-tions are in-stru-mented with
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]\OT1/cmr/m/n/10 G-Free re-moves all un-aligned free-branch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 \OT1/cmr/m/n/10 The fol-low-ing ex-am-ple is per-formed just to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 \OT1/cmr/m/n/10 show the work-ing of ROP at-tack. Tool
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 130--131
+Underfull \hbox (badness 6001) in paragraph at lines 154--155
 \OT1/cmr/m/n/10 Per-formed on Ubuntu 12.04 LTS, with stack
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 \OT1/cmr/m/n/10 ca-nary pro-tec-tion and ASLR turned off.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 6016) in paragraph at lines 154--155
 \OT1/cmr/m/n/10 flag \OT1/cmr/m/it/10 -fno-stack-protector \OT1/cmr/m/n/10 whil
-e com-pil-ing and,
+e com-pi-la-tion and,
  []
 
-<vul_prog.jpg, id=28, 786.94pt x 311.1625pt>
+<vul_prog.jpg, id=31, 786.94pt x 311.1625pt>
 File: vul_prog.jpg Graphic file (type jpg)
  <use vul_prog.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
+Underfull \hbox (badness 10000) in paragraph at lines 156--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
+Underfull \hbox (badness 10000) in paragraph at lines 156--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
+Underfull \hbox (badness 10000) in paragraph at lines 156--160
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
+Underfull \hbox (badness 10000) in paragraph at lines 156--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--140
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
 \OT1/cmr/m/n/10 "\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 xb0\OMS/cmsy/m/n/10 n\OT1/cm
 r/m/n/10 xf1\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 xfd\OMS/cmsy/m/n/10 n\OT1/cmr/m/n
 /10 xb7"'` 
  []
 
 
-Overfull \hbox (2.92833pt too wide) in paragraph at lines 141--141
+Overfull \hbox (2.92833pt too wide) in paragraph at lines 165--165
 []\OT1/cmr/bx/n/14.4 Proposed De-fen-sive Tech-nique 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+[7 <./vul_prog.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-[6 <./vul_prog.jpg>] <phase1.png, id=33, 504.88625pt x 242.9075pt>
+<phase1.png, id=37, 504.88625pt x 242.9075pt>
 File: phase1.png Graphic file (type png)
-
-<use phase1.png>
-Overfull \hbox (18.72438pt too wide) in paragraph at lines 150--152
+ <use phase1.png>
+Overfull \hbox (18.72438pt too wide) in paragraph at lines 174--176
 []
  []
 
-<phase2.png, id=35, 417.56pt x 308.15125pt>
+<phase2.png, id=39, 417.56pt x 308.15125pt>
 File: phase2.png Graphic file (type png)
  <use phase2.png>
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
+Underfull \hbox (badness 10000) in paragraph at lines 178--180
 []
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 158--159
+Underfull \hbox (badness 5260) in paragraph at lines 182--183
 \OT1/cmr/m/n/10 The ap-proach is im-ple-mented only for of-fline
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 158--159
+Underfull \hbox (badness 6995) in paragraph at lines 182--183
 \OT1/cmr/m/n/10 pur-pose for the se-cu-rity of the stored files.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 \OT1/cmr/m/n/10 so that no of-fline dis-clo-sure of gad-gets is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 \OT1/cmr/m/n/10 12.04 LTS us-ing gcc 4.6.3 com-piler. 
  []
 
-<locations.png, id=36, 425.59pt x 155.58125pt>
+<locations.png, id=40, 425.59pt x 155.58125pt>
 File: locations.png Graphic file (type png)
  <use locations.png>
-<data.jpg, id=37, 389.455pt x 151.56625pt>
+<data.jpg, id=41, 389.455pt x 151.56625pt>
 File: data.jpg Graphic file (type jpg)
  <use data.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 164--169
+Underfull \hbox (badness 10000) in paragraph at lines 188--193
 
  []
 
 
-Overfull \hbox (0.3571pt too wide) in paragraph at lines 164--169
+Overfull \hbox (0.3571pt too wide) in paragraph at lines 188--193
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--169
+Underfull \hbox (badness 10000) in paragraph at lines 188--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--169
+Underfull \hbox (badness 10000) in paragraph at lines 188--193
 []
  []
 
-[7 <./phase1.png> <./phase2.png>] (./me-mid-term-report-template.bbl
+[8 <./phase1.png> <./phase2.png>] (./me-mid-term-report-template.bbl
 Underfull \hbox (badness 7888) in paragraph at lines 15--17
 []\OT1/cmr/m/n/10 PaX Team.  Pax ad-dress space lay-out
  []
 
-[8 <./locations.png> <./data.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
+[9 <./locations.png> <./data.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
+\OT1/cmr/m/n/10 Grace, and Sina Bahram.  De-feat-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 []\OT1/cmr/m/n/10 Arpan Gupta, Jalal Habibi, Michael S
  []
 
 
-Underfull \hbox (badness 6047) in paragraph at lines 89--92
+Underfull \hbox (badness 6047) in paragraph at lines 108--111
 \OT1/cmr/m/n/10 Kirk-patrick, and Elisa Bertino.  Mar-lin:
  []
 
 
-Underfull \hbox (badness 7344) in paragraph at lines 89--92
+Underfull \hbox (badness 7344) in paragraph at lines 108--111
 \OT1/cmr/m/n/10 Mit-i-gat-ing code reuse at-tacks us-ing code
  []
 
-) [9] (./me-mid-term-report-template.aux) ) 
+) [10] (./me-mid-term-report-template.aux) ) 
 Here is how much of TeX's memory you used:
- 1117 strings out of 495061
- 14432 string characters out of 1182621
- 74041 words of memory out of 3000000
- 4316 multiletter control sequences out of 15000+50000
+ 1120 strings out of 495061
+ 14457 string characters out of 1182621
+ 79053 words of memory out of 3000000
+ 4319 multiletter control sequences out of 15000+50000
  8848 words of font info for 31 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,6n,19p,1748b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmti10.pfb>
-Output written on me-mid-term-report-template.pdf (9 pages, 428968 bytes).
+ 25i,6n,19p,1748b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive
+/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmti10.pfb>
+Output written on me-mid-term-report-template.pdf (10 pages, 436215 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

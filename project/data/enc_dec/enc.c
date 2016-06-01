@@ -129,7 +129,16 @@ int main(int argc, char *argv[])
 	char ch, addr_loc[4], line[100], offset_ar[4];
 	unsigned char data[10];
 	int len, i, offset, ctr;
-	char leave=201;		// byte to replace with
+
+	char leave1[1], leave2[2], leave3[3];
+
+	char leave[1];
+	leave[0]=201;
+
+	leave1[0]=83;//83
+	leave2[0]=139;leave2[1]=06;//8b 06
+	leave3[0]=131;leave3[1]=238;leave3[2]=04;//83 ee 04
+
 	FILE *ptr_loc, *ptr_dump, *ptr_bin, *ptr_bin_r, *ptr_len_off, *ptr_data;
 
 	ptr_loc=fopen("locations.txt","r");
@@ -189,9 +198,16 @@ int main(int argc, char *argv[])
 		fseek(ptr_bin,offset,SEEK_SET);
 		ctr=len;
 
-		while(ctr--)
-			fprintf(ptr_bin,"%c",leave);
-			//fwrite(&leave, sizeof(unsigned char), 1, ptr_bin);
+/*		while(ctr--)
+			//fprintf(ptr_bin,"%c",leave);
+			fwrite(leave, sizeof(char), 1, ptr_bin);
+*/
+		if(len==1)
+			fwrite(leave1, sizeof(leave1), 1, ptr_bin);
+		else if(len==2)
+			fwrite(leave2, sizeof(leave2), 1, ptr_bin);
+		else if(len==3)
+			fwrite(leave3, sizeof(leave3), 1, ptr_bin);
 		rewind(ptr_bin);
 
 //		exit(1);

@@ -48,11 +48,6 @@ Tyler Bletsch, Xuxian Jiang, Vince~W Freeh, and Zhenkai Liang.
 \newblock In {\em Proceedings of the 6th ACM Symposium on Information, Computer
   and Communications Security}, pages 30--40. ACM, 2011.
 
-\bibitem{ropeme}
-Long Le.
-\newblock Payload already inside: datafire-use for rop exploits.
-\newblock {\em Black Hat USA}, 2010.
-
 \bibitem{effcfi}
 Lucas Davi, Daniel Lehmann, Ahmad-Reza Sadeghi, and Fabian Monrose.
 \newblock Stitching the gadgets: On the ineffectiveness of coarse-grained
@@ -69,6 +64,30 @@ Kangjie Lu, Chengyu Song, Byoungyoung Lee, Simon~P Chung, Taesoo Kim, and Wenke
 \newblock Aslr-guard: Stopping address space leakage for code reuse attacks.
 \newblock In {\em Proceedings of the 22nd ACM SIGSAC Conference on Computer and
   Communications Security}, pages 280--291. ACM, 2015.
+
+\bibitem{kernel}
+Jinku Li, Zhi Wang, Xuxian Jiang, Michael Grace, and Sina Bahram.
+\newblock Defeating return-oriented rootkits with return-less kernels.
+\newblock In {\em Proceedings of the 5th European conference on Computer
+  systems}, pages 195--208. ACM, 2010.
+
+\bibitem{gfree}
+Kaan Onarlioglu, Leyla Bilge, Andrea Lanzi, Davide Balzarotti, and Engin Kirda.
+\newblock G-free: defeating return-oriented programming through gadget-less
+  binaries.
+\newblock In {\em Proceedings of the 26th Annual Computer Security Applications
+  Conference}, pages 49--58. ACM, 2010.
+
+\bibitem{ropeme}
+Long Le.
+\newblock Payload already inside: datafire-use for rop exploits.
+\newblock {\em Black Hat USA}, 2010.
+
+\bibitem{breakdef}
+Nicholas Carlini and David Wagner.
+\newblock Rop is still dangerous: Breaking modern defenses.
+\newblock In {\em 23rd USENIX Security Symposium (USENIX Security 14)}, pages
+  385--399, 2014.
 
 \bibitem{secrvw}
 Ahmad-Reza Sadeghi, Lucas Davi, and Per Larsen.

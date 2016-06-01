@@ -1,52 +1,52 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: me-mid-term-report-template.aux
 The style file: unsrt.bst
-Illegal, another \bibstyle command---line 46 of file me-mid-term-report-template.aux
+Illegal, another \bibstyle command---line 53 of file me-mid-term-report-template.aux
  : \bibstyle
  :          {abbrv}
 I'm skipping whatever remains of this command
 Database file #1: ref.bib
 Warning--empty journal in hafix
 Warning--empty journal in marlin
-You've used 15 entries,
+You've used 18 entries,
             1791 wiz_defined-function locations,
-            527 strings with 6312 characters,
-and the built_in function-call counts, 3921 in all, are:
-= -- 346
-> -- 195
-< -- 6
-+ -- 71
-- -- 56
-* -- 224
-:= -- 597
-add.period$ -- 50
-call.type$ -- 15
-change.case$ -- 15
+            542 strings with 6922 characters,
+and the built_in function-call counts, 5063 in all, are:
+= -- 459
+> -- 237
+< -- 9
++ -- 86
+- -- 68
+* -- 289
+:= -- 747
+add.period$ -- 61
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 195
-empty$ -- 382
-format.name$ -- 56
-if$ -- 917
+cite$ -- 20
+duplicate$ -- 256
+empty$ -- 493
+format.name$ -- 68
+if$ -- 1199
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 13
-newline$ -- 76
-num.names$ -- 15
-pop$ -- 76
+int.to.str$ -- 18
+missing$ -- 16
+newline$ -- 91
+num.names$ -- 18
+pop$ -- 94
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 105
+skip$ -- 147
 stack$ -- 0
-substring$ -- 187
-swap$ -- 68
-text.length$ -- 6
+substring$ -- 275
+swap$ -- 99
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 35
-width$ -- 17
-write$ -- 163
+while$ -- 47
+width$ -- 20
+write$ -- 198
 (There was 1 error message)
