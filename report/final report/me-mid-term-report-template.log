@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.5.14)  2 JUN 2016 03:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.5.14)  3 JUN 2016 11:51
 entering extended mode
  %&-line parsing enabled.
 **me-mid-term-report-template.tex
@@ -274,88 +274,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--160
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--164
+<ex_prog.jpg, id=32, 543.02875pt x 402.50375pt>
+File: ex_prog.jpg Graphic file (type jpg)
+ <use ex_prog.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 161--165
 \OT1/cmr/m/n/10 "\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 xb0\OMS/cmsy/m/n/10 n\OT1/cm
 r/m/n/10 xf1\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 xfd\OMS/cmsy/m/n/10 n\OT1/cmr/m/n
 /10 xb7"'` 
  []
 
 
-Overfull \hbox (2.92833pt too wide) in paragraph at lines 165--165
+Underfull \hbox (badness 10000) in paragraph at lines 161--165
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--165
+
+ []
+
+
+Overfull \hbox (2.92833pt too wide) in paragraph at lines 168--168
 []\OT1/cmr/bx/n/14.4 Proposed De-fen-sive Tech-nique 
  []
 
-[7 <./vul_prog.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+[7 <./vul_prog.jpg> <./ex_prog.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
-<phase1.png, id=37, 504.88625pt x 242.9075pt>
+<phase1.png, id=38, 504.88625pt x 242.9075pt>
 File: phase1.png Graphic file (type png)
  <use phase1.png>
-Overfull \hbox (18.72438pt too wide) in paragraph at lines 174--176
+Overfull \hbox (18.72438pt too wide) in paragraph at lines 177--179
 []
  []
 
 <phase2.png, id=39, 417.56pt x 308.15125pt>
 File: phase2.png Graphic file (type png)
  <use phase2.png>
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
 []
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 182--183
+Underfull \hbox (badness 5260) in paragraph at lines 185--186
 \OT1/cmr/m/n/10 The ap-proach is im-ple-mented only for of-fline
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 182--183
+Underfull \hbox (badness 6995) in paragraph at lines 185--186
 \OT1/cmr/m/n/10 pur-pose for the se-cu-rity of the stored files.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 \OT1/cmr/m/n/10 so that no of-fline dis-clo-sure of gad-gets is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 \OT1/cmr/m/n/10 12.04 LTS us-ing gcc 4.6.3 com-piler. 
  []
 
-<locations.png, id=40, 425.59pt x 155.58125pt>
+[8 <./phase1.png (PNG copy)> <./phase2.png (PNG copy)>]
+<locations.png, id=43, 425.59pt x 155.58125pt>
 File: locations.png Graphic file (type png)
  <use locations.png>
-<data.jpg, id=41, 389.455pt x 151.56625pt>
+<data.jpg, id=45, 389.455pt x 151.56625pt>
 File: data.jpg Graphic file (type jpg)
  <use data.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 188--193
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 
  []
 
 
-Overfull \hbox (0.3571pt too wide) in paragraph at lines 188--193
+Overfull \hbox (0.3571pt too wide) in paragraph at lines 191--196
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--193
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--193
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 []
  []
 
-[8 <./phase1.png> <./phase2.png>] (./me-mid-term-report-template.bbl
+[9 <./locations.png> <./data.jpg>] (./me-mid-term-report-template.bbl
 Underfull \hbox (badness 7888) in paragraph at lines 15--17
 []\OT1/cmr/m/n/10 PaX Team.  Pax ad-dress space lay-out
  []
 
-[9 <./locations.png> <./data.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 69--73
 \OT1/cmr/m/n/10 Grace, and Sina Bahram.  De-feat-ing
  []
@@ -377,13 +390,13 @@ Underfull \hbox (badness 7344) in paragraph at lines 108--111
 
 ) [10] (./me-mid-term-report-template.aux) ) 
 Here is how much of TeX's memory you used:
- 1120 strings out of 495061
- 14457 string characters out of 1182621
- 79053 words of memory out of 3000000
- 4319 multiletter control sequences out of 15000+50000
+ 1125 strings out of 495061
+ 14531 string characters out of 1182621
+ 84054 words of memory out of 3000000
+ 4323 multiletter control sequences out of 15000+50000
  8848 words of font info for 31 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,6n,19p,1748b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,6n,19p,1748b,250s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
@@ -393,9 +406,9 @@ exmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive
 /fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmti10.pfb>
-Output written on me-mid-term-report-template.pdf (10 pages, 436215 bytes).
+Output written on me-mid-term-report-template.pdf (10 pages, 479860 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
