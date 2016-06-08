@@ -6,14 +6,14 @@ int convertToDecimal(char*);
  
 int main()
 {
-    char hex[3]="3ff";
+    char hex[5]="3dd59";
     printf("%d",convertToDecimal(hex));
     return 0;
 }
  
 int convertToDecimal(char *hexString)
 {
-    int i, length = 3;
+    int i, length = 5;
     const int base = 16; // Base of Hexadecimal Number
     int decimalNumber = 0;
 

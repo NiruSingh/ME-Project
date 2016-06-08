@@ -9,3 +9,9 @@ objdump -d simple >> locations.txt
 gcc -c -Wall -Werror -fpic operation.c
 gcc -shared -o liboperation.so operation.o
 gcc -L/home/niru/Documents/ME-Project/project/data/enc_dec/ -Wl,-rpath=/home/niru/Documents/ME-Project/project/data/enc_dec/ -Wall -o prog prog.c -loperation -lm
+
+
+// for writing time to a file
+{ time ./ab ; } 2>a.txt		//ab is executable name
+{ time ./enc_script.sh liboperation2.so ; } 2> ./results/liboperation/enc_time.txt		//for encryption
+{ time ./dec_script.sh liboperation2.so ; } 2> ./results/liboperation/dec_time.txt		//for decryption

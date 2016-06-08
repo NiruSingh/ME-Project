@@ -1,4 +1,13 @@
-0x571L: add esp 0x14 ; pop ebx ; pop ebp ;;
-0x74eL: add esp 0x64 ; pop ebx ; pop ebp ;;
-0x46dL: add esp 0x8 ; pop ebx ;;
-0x80dL: add esp 0x8 ; pop ebx ;;
+0x8062c0bL: add esp 0x14 ; pop ebx ; pop ebp ;;
+0x8065450L: add esp 0x14 ; pop ebx ; pop ebp ;;
+0x8062c6fL: add esp 0x24 ; pop ebx ; pop ebp ;;
+0x8062ceeL: add esp 0x24 ; pop ebx ; pop ebp ;;
+0x8062d07L: add esp 0x24 ; pop ebx ; pop ebp ;;
+0x8064b9cL: add esp 0x34 ; pop ebx ; pop ebp ;;
+0x809398fL: add esp 0x34 ; pop ebx ; pop ebp ;;
+0x8093a12L: add esp 0x34 ; pop ebx ; pop ebp ;;
+0x80621cfL: add esp 0x4 ; pop ebx ; pop ebp ;;
+0x807bba0L: add esp 0x4 ; pop ebx ; pop ebp ;;
+0x807bbe0L: add esp 0x4 ; pop ebx ; pop ebp ;;
+0x80cbaf9L: add esp 0x44 ; pop ebx ; pop ebp ;;
+0x80cbb69L: add esp 0x44 ; pop ebx ; pop ebp ;;

@@ -12,6 +12,10 @@
 
 \usepackage[none]{hyphenat}		%prevent breaking of words
 
+\usepackage{caption}
+\captionsetup{width=0.8\linewidth}
+\usepackage{array}
+
 \usepackage{graphicx} 
 \pagestyle{empty}
 \setlength{\topmargin}{ 0.25in}
@@ -50,7 +54,7 @@
 	\section{INTRODUCTION}
 	Memory corruption vulnerabilities are one of the oldest and most exploited vulnerabilities. One of the main reasons being the insecure coding practices and omitting the security features like strong typing, bounds checking, etc. in legacy code to provide better efficiency. And for a long time these vulnerabilities have been exploited by the attackers for malicious purposes.
 
-	Starting from the buffer overflow vulnerabilities that allowed the attacker to put some payload on stack and redirect execution to it \cite{aleph}. The payload is used for malicious activities like getting a remote shell. It motivated security researcher to focus on these vulnerabilities and some solutions were proposed. The StackGuard compiler addressed this stack smashing by checking the integrity of activation records by putting a "canary" word next to return address on stack \cite{stackguard}. Some other techniques also came into existence like address space layout randomisation(ASLR) \cite{pax} that randomises the address space of the executable, and Data Execution prevention(DEP) that prevent the execution of code by preventing memory pages being both writeable and executable at the same time. But some methods started coming up to bypass these security methods. G. Richarte et al. \cite{4trick} presented four tricks to bypass the stack samashing protection provided by StackGuard. The ASLR protection can be bypassed by brute force \cite{effaslr}. DEP can be bypassed by Return Oriented Programming(ROP). The code-reuse  attacks came in practice that instead of inserting new code, reuses the present executable code to perform operations they need. And some more methods were proposed like fine-grained ASLR, control flow integrity(CFI) checking, and even hardware based solutions like HAFIX \cite{hafix}. But, some new attacks came like Just-in-time ROP that bypasses fine-grained ASLR \cite{jitrop}, and some also showed bypassing of CFI solutions. Also, ROP is Turing-complete i.e., it can perform an arbitrary execution. This, emphasises on the need of more work in the field.
+	Starting from the buffer overflow vulnerabilities that allowed the attacker to put some payload on stack and redirect execution to it \cite{aleph}. The payload is used for malicious activities like getting a remote shell. It motivated security researcher to focus on these vulnerabilities and some solutions were proposed. The StackGuard compiler addressed this stack smashing by checking the integrity of activation records by putting a "canary" word next to return address on stack \cite{stackguard}. Some other techniques also came into existence like address space layout randomisation(ASLR) \cite{pax} that randomises the address space of the executable, and Data Execution prevention(DEP) that prevent the execution of code by preventing memory pages being both writeable and executable at the same time. But some methods started coming up to bypass these security methods. G. Richarte et al. \cite{4trick} presented four tricks to bypass the stack samashing protection provided by StackGuard. The ASLR protection can be bypassed by brute force \cite{effaslr}. DEP can be bypassed by Return Oriented Programming(ROP). The code-reuse  attacks came in practice that instead of inserting new code, reuses the present executable code to perform operations they need. And some more methods were proposed like fine-grained ASLR, control flow integrity(CFI) checking, compiler-based solutions including code rewriting and even hardware based solutions like HAFIX \cite{hafix}. But, some new attacks came like Just-in-time ROP that bypasses fine-grained ASLR \cite{jitrop}, and some also showed bypassing of CFI solutions. Also, ROP is Turing-complete i.e., it can perform an arbitrary execution. This, emphasises on the need of more work in the field.
 	
 	The focus of our work would be mitigate code-reuse attacks by preventing the exposure of stack pivot sequence(explained in section 2.2) to attackers.
 	
@@ -63,6 +67,7 @@
 	\
 	
 	\includegraphics[scale=.4]{stack_normal.jpg}
+	\captionof{figure}{Structure of call stack}
 	\
 	\
 	\
@@ -71,11 +76,10 @@
 	
 	Say the shellcode to execute a shell is placed by the attacker on the stack at address 0$\times$80484cd, it can be done by passing the shellcode as the argument which would be then stored on the stack. By passing a input like "A"*12 +"A"*4 +"\textbackslash $\times$cd\textbackslash $\times$84\textbackslash $\times$04\textbackslash $\times$08", the first 12 bytes will fill the buffer variable, the next 4 will overwrite the frame pointer, and the others will overwrite the return address by 0$\times$80484cd. And stack looks like this
 	
+
+	\includegraphics[scale=.45]{stack_prog.jpg}
+	\captionof{figure}{Stack after overflow}
 	\
-	\
-	\
-	
-	\includegraphics[scale=.45]{stack_prog.jpg}	
 	
 	When this subroutine returns the address 0$\times$80484cd will be popped in the instruction pointer to start execution from that address thereby executing the malicious code injected by the attacker\cite{aleph}.
 	
@@ -86,7 +90,7 @@
 	
 	The basic idea behind any code reuse attack is to direct the control flow of the program to cause what the attacker intends. Taking on the mostly used ROP technique, that has been shown to be Turing complete i.e., an arbitrary computation can be performed using this. Here the attacker uses the small code sequences that ends with a "ret" instruction called "gadgets". These gadgets are generally atomic operations like ADD, LOAD, etc and ends at a "ret" instruction. These gadgets are chosen carefully so that they do not alter the control flow without the intention of attacker. In order to execute the attacker payload the control flow of program is directed to payload using a special gadget called stack pivot sequence or stack pivot gadget which can be taken as any gadget that modifies the value of the stack pointer. For example, the small code sequence "\emph{xchg \%esp, \%eax; ret}" is a stack pivot sequence that exchanges the value of \%esp and the value present in the \%eax register. Once \%esp points to payload as per normal execution the value pointed by \%esp is popped in Instruction pointer(\%eip) and execution of payload starts.\break  Consider the figure 3 representing basic flow of code-reuse attack.
 	
-	The attacker crafts a payload that is generally a sequence of return address corresponding to the gadgets along with some data needed by the those gadgets and writes it in the application's address space (step1). The area used to put the payload is generally the attackers controllable memory area, so that he knows the start address and can easily write the payload to that area. Generally the stack and heap area is used for this \break \break \includegraphics[scale=.40]{rop.jpg}\break purpose. Then the vulnerability present is exploited (say the buffer is overflown to overwrite the return address or, the address of code pointer is overwritten to point to stack pivot sequence)(step2). It directs the control to the stack pivot sequence when the exploited vulnerability is used by the application(step3). The stack pivot sequence modifies the stack pointer(\%esp) value to direct it to the attackers payload. After the execution of the stack pivot sequence the stack pointer now points to the Ret.Add.1 that points to gadget1(step4). The "ret" instruction at the end loads the address pointed to by stack pointer in the instruction pointer and increments the stack pointer by 1. Now, gadget1 is executed and the stack pointer has been incremented to point to Ret.Add.2 that points to gadget2(step5). It goes on incrementing the stack pointer and executing the gadgets until the goal is reached.
+	The attacker crafts a payload that is generally a sequence of return address corresponding to the gadgets along with some data needed by the those gadgets and writes it in the application's address space (step1). The area used to put the payload is generally the attackers controllable memory area, so that he knows the start address and can easily write the payload to that area. Generally the stack and heap area is used for this purpose.\break \break \includegraphics[scale=.40]{rop.jpg}\captionof{figure}{Basic flow of code reuse attack (Idea from \cite{jitrop})} Then the vulnerability present is exploited (say the buffer is overflown to overwrite the return address or, the address of code pointer is overwritten to point to stack pivot sequence)(step2). It directs the control to the stack pivot sequence when the exploited vulnerability is used by the application(step3). The stack pivot sequence modifies the stack pointer(\%esp) value to direct it to the attackers payload. After the execution of the stack pivot sequence the stack pointer now points to the Ret.Add.1 that points to gadget1(step4). The "ret" instruction at the end loads the address pointed to by stack pointer in the instruction pointer and increments the stack pointer by 1. Now, gadget1 is executed and the stack pointer has been incremented to point to Ret.Add.2 that points to gadget2(step5). It goes on incrementing the stack pointer and executing the gadgets until the goal is reached.
 	
 	\subsection{Basic Mitigation Techniques}
 	The security researchers have proposed many method over last few years but the two leading defensive techniques against code-reuse attacks are control-flow integrity and address space layout randomisation. Overview of these techniques is given below.
@@ -154,15 +158,17 @@ the saved return address stored on the stack and corresponding footer before \te
 	The following example is performed just to show the working of ROP attack. Tool Ropeme\cite{ropeme} is used for finding gadgets(including stack pivot) required for building ROP payload. Performed on Ubuntu 12.04 LTS, with stack canary protection and ASLR turned off.\break Stack canary can be turned off using the gcc flag \textit{-fno-stack-protector} while compilation and,\break ASLR can be disabled by the command \textit{echo 0 $<$ /proc/sys/kernel/randomize\_va\_space} in terminal by \textit{sudo} user. 
 	
 	Consider the vulnerable program in the figure below
-	\break \break
-	\includegraphics[scale=.27]{vul_prog.jpg}\break \break
+	\
+	\includegraphics[scale=.27]{vul_prog.jpg}
+	\captionof{figure}{Vulnerable program for example}
+	\
 	The program contains a buffer overflow vulnerability at the array \textit{char buf[256]}, bound checking is not performed before copying data to this array. So, this array would be made to overflow and write to the locations beyond its limit, which in turn overwrites the return address by the address of the stack pivot gadget. Thus, when the function returns it would return to the stack pivot gadgets and execute it. The stack pivot will modify the stack pointer to point it to the payload and the execution of the payload starts.
 	
 	Consider the below input to the program - \break
 	`python -c 'print "A"*264+"\textbackslash x5e\textbackslash x15\textbackslash xe5\textbackslash xb7"+ "\textbackslash xa1\textbackslash xe5\textbackslash xe9\textbackslash xb7"+"\textbackslash x4f\textbackslash x40\textbackslash xe4\textbackslash xb7"+ $\ldots\ldots$ + "\textbackslash xb0\textbackslash xf1\textbackslash xfd\textbackslash xb7"'` \break
 	The A's fills the stack till the return address and the return address is overwritten with 0xb7e5155e which is the address of the stack pivot gadget \textit{"add esp} 0x4;\textit{ ret"} which when executed increments the stack pointer(\%esp) by 4. So, now when the function returns it returns to 0xb7e5155e which is the address of the stack pivot gadget. And the remaining data is copied over on stack. And stack now looks like this
-	\includegraphics[scale=.4]{ex_prog.jpg}\break
-		
+	\includegraphics[scale=.4]{ex_prog.jpg}
+	\captionof{figure}{Stack after copying data to \textit{buf}}
 	 The 2nd address is the address of a \textit{NOP} gadget which will not do any operation and simply increments the pointer to point to the next gadget. The actual ROP payload starts from 0xb7e4404f which is the 3rd address in the given input so we need to make the stack pointer to point to 3rd address in input. The address of the gadgets in the payload are given in the little-endian format as per the requirement of the system. After the function returns, the stack pointer would initially point to the address of \textit{NOP} gadget because it is the one present next to the return address on the stack and when the stack pivot is executed it increments the stack pointer by 4 which makes stack pointer to point to the ROP payload. So, now the payload executes and pops up a shell upon completion.
 	
 	\section{Proposed Defensive Technique}
@@ -174,11 +180,13 @@ the saved return address stored on the stack and corresponding footer before \te
 	To prevent the exposure of stack pivot sequences these and replaced with some dummy assembly code in the executable and stored, so the attacker would not be able to find that he could have been able to before replacement. Before execution the original code is replaced back at correct position in the executable. The process basically includes two phases- first one the encryption phase and second the decryption phase.\break
 	
 	\subsubsection{First Phase}
-	\includegraphics[scale=.5]{phase1.png}\break
+	\includegraphics[scale=.5]{phase1.png}
+	\captionof{figure}{First phase}
 	The encryption phase deals with the form in which the executable is stored on the system. Initially, using a tool like Ropeme\cite{ropeme}, the executable to be secured is searched for the gadgets which are candidates for stack pivot sequences that can be used by the attacker and these gadgets are stored in a separate file. The information that would be required for placing them back like their offset from starting address and the length of the gadget are also stored in a file. These files are encrypted and kept at a secure location. The found stack pivots are now searched in the executable and are replaced with a dummy assembly code of same length as of the gadget being replaced. The executable is now available in the system in the form where the candidates for stack pivot are replaced by some other code. If the attacker now tries to search for stack pivots in that executable he would not be able to find any candidate. So, even if the attacker has placed the payload somewhere in process address space he won't be able to execute that payload as he don't have any stack pivot to direct control to the payload.
 	
 	\subsubsection{Second Phase}
-	\includegraphics[scale=.5]{phase2.png}\break
+	\includegraphics[scale=.5]{phase2.png}
+	\captionof{figure}{Second phase}
 	The executable after going through the first phase would not be able to execute in its normal way as some of its instructions have been modified. So, in order to execute normally the executable has to be converted back to as it was before going through the first phase. And this is the job of the second phase. To achieve this, first the encrypted files containing the stack pivots, offsets and instruction lengths are decrypted. Using the offset of a particular stack pivot sequence it is placed in its right place in the executable, and this is done for all stack pivots obtained from the first phase. After this has been done the executable is now the way it was before first phase and can now be executed normally.
 	
 	\subsection{Implementation Details}
@@ -189,18 +197,40 @@ the saved return address stored on the stack and corresponding footer before \te
 		\item \textit{data file} for storing the instructions replaced in the executable.
 	\end{itemize}
 	Initially, the executable is scanned for stack pivots using the tool Ropeme\cite{ropeme} and the generated output is stored in the \textit{locations file}. Below is a sample output on a custom shared library we used for evaluation of approach that shows some stack pivot candidates along with offset from the starting address.\break \break
-	\includegraphics[scale=.55]{locations.png}\break
+	\includegraphics[scale=.55]{locations.png}
+	\captionof{figure}{\textit{locations file}}
 	After this, these gadgets are searched in the executable using the offset. And the binary data at those locations is copied to \textit{data file} and the length of the data copied and the offset are saved in \textit{len\_off file}. Below is a sample output of contents of the \textit{data file}.\break \break
-	\includegraphics[scale=.5]{data.jpg}\break
+	\includegraphics[scale=.5]{data.jpg}
+	\captionof{figure}{\textit{data file}}
 	The \textit{locations file} can be removed from system after the first phase. And the others the \textit{data file} \& \textit{len\_off file} are encrypted using \textit{ccrypt} which is based on the Rijndael block cipher, a version of which is also used in the Advanced Encryption Standard(AES).
 	
 	After this, Ropeme\cite{ropeme} is again run to find stack pivots, but it was not able to find those gadgets that it found previously.
 	
 	In order to execute the executable it is converted back to its original form. First the \textit{data file} and \textit{len\_off file} are decrypted. Now using the offset and length information from \textit{len\_off file} the data from \textit{data file} is placed in its original location. And the executable now can be executed normally.
 	
-	\subsection{Security Evaluation}
-	After encryption trying to find stack pivots results in nothing i.e., it is not able to find the stack pivots that it found initially. Also, the security of approach depends on the security of the key used for encryption and \textit{ccrypt} utility, which is used for encryption of the files. Also the key need to be stored on a secure location that cannot be accessed by any unauthorized means.
+	\section{Evaluation}
+	The main purpose of the approach is to prevent the attacker from accessing the stack pivot gadgets. It has been seen that after the first phase all the possible candidates for stack pivots are replaced with some other valid code means they are no longer present there. so, if an attacker tries to find them now he should not get those stack pivots. To check this, we run the tool Ropeme again after the firsst phase but this time it was not able to find the gadgets that it found earlier. So, the executable can be stored encrypted on disk without fear of this offline attack.
+	
+	It is seen from Table 1 that the number of stack pivots is very less as compared to total number of gadgets discovered. So, the approach requires less modification in files as compared to the similar ones described in section 4. Also, encryption time is higher but it should not be an issue because the executable needs to be encrypted only once. Also, the decryption time is very less so the files can be decrypted frequently without much overhead. But, this is done only in offline mode and can be applied to work online but would require OS level changes and much more code rewriting.
 
+	\subsection{Security Evaluation}
+	After encryption trying to find stack pivots results in nothing i.e., it is not able to find the stack pivots that it found initially. Also, the security of approach depends on the security of the key used for encryption and \textit{ccrypt} utility, which is used for encryption of the files. Also the key need to be stored on a secure location that cannot be accessed by any unauthorized means which can be taken care by the OS.
+\end{multicols}
+
+\begin{tabular}{|c|c|c|m{2.7cm}|l|c|}
+\hline 
+Name & Size & Total No. of gadgets & No. of stack pivot candidates & Encryption time & Decryption time \\ 
+\hline 
+liboperation.so & 6.9 kB & 74 & 4 & 0min 0.006sec & 0min 0.006sec \\ 
+\hline 
+Linux\_lib32.so & 1.1 MB & 9209 & 539 & 2min 54.413sec & 0min 0.017sec \\ 
+\hline 
+Linux\_lib64.so & 1.1 MB & 7342 & 383 & 5min 34.032sec & 0min 0.012sec \\ 
+\hline 
+\end{tabular} 
+\captionof{table}{Details of test files}
+
+\begin{multicols}{2}
 	\section{Conclusions and Future Work}
 	Code-reuse attacks are one of the major exploits for a long period. Many studies have been done and approaches have been proposed to mitigate these attacks \cite{breakdef}\cite{secrvw}\cite{memerr}\cite{marlin}. Major approaches include stack canary, NX bit, Address space layout randomisation and control flow integrity checking. But, it has been shown time to time that these approaches can be bypassed. These exploits can not be prevented in a single moment, thus a fast progress towards mature security defences and towards the use of safe languages is required.
 	

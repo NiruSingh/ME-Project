@@ -1,7 +1,7 @@
 gdb -x f.txt -q simple >> assembly.txt
 gdb -x f.txt -q simple | grep esp >> locations.txt
 disas /r main		// to get opcodes along with assembly
-objdump -d simple >> location.txt
+objdump -d simple >> locations.txt
 
 
 
@@ -9,3 +9,9 @@ objdump -d simple >> location.txt
 gcc -c -Wall -Werror -fpic operation.c
 gcc -shared -o liboperation.so operation.o
 gcc -L/home/niru/Documents/ME-Project/project/data/enc_dec/ -Wl,-rpath=/home/niru/Documents/ME-Project/project/data/enc_dec/ -Wall -o prog prog.c -loperation -lm
+
+
+// for writing time to a file
+{ time ./ab ; } 2>a.txt		//ab is executable name
+{ time ./enc_script.sh liboperation2.so ; } 2> ./results/liboperation/enc.txt		//for encryption
+{ time ./dec_script.sh liboperation2.so ; } 2> ./results/liboperation/dec.txt		//for decryption

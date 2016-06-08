@@ -6,7 +6,7 @@ int convertToDecimal(char*);
  
 int main()
 {
-    char hex[4]="3ff";
+    char hex[5]="3dd59";
     printf("%d",convertToDecimal(hex));
     return 0;
 }

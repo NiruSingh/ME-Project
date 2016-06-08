@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.5.14)  3 JUN 2016 12:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2016.5.14)  8 JUN 2016 21:21
 entering extended mode
  %&-line parsing enabled.
 **me-mid-term-report-template.tex
@@ -75,13 +75,36 @@ Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
 \langwohyphens=\language4
 LaTeX Info: Redefining \_ on input line 43.
 )
-(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
 
 (/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
+\captionmargin=\dimen111
+\captionmargin@=\dimen112
+\captionwidth=\dimen113
+\caption@indent=\dimen114
+\caption@parindent=\dimen115
+\caption@hangindent=\dimen116
+)
+\c@ContinuedFloat=\count95
+)
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks15
+\extratabsurround=\skip45
+\backup@length=\skip46
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -95,272 +118,278 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
-\Gread@gobject=\count95
+\Gread@gobject=\count96
 ))
-\Gin@req@height=\dimen111
-\Gin@req@width=\dimen112
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
 )
 (./me-mid-term-report-template.aux)
 \openout1 = `me-mid-term-report-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count96
-\scratchdimen=\dimen113
+\scratchcounter=\count97
+\scratchdimen=\dimen121
 \scratchbox=\box52
-\nofMPsegments=\count97
-\nofMParguments=\count98
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count99
-\MPscratchDim=\dimen114
-\MPnumerator=\count100
-\everyMPtoPDFconversion=\toks16
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen122
+\MPnumerator=\count101
+\everyMPtoPDFconversion=\toks17
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 33.
+(Font)              <12> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 33.
+(Font)              <8> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 33.
+(Font)              <6> on input line 37.
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<stack_normal.jpg, id=10, 543.02875pt x 402.50375pt>
+<stack_normal.jpg, id=10, 543.02875pt x 375.4025pt>
 File: stack_normal.jpg Graphic file (type jpg)
  <use stack_normal.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
-
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 70--70
+[] [] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 72.
+(Font)              <7> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 72.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
+(Font)              <5> on input line 77.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
 
-<stack_prog.jpg, id=11, 543.02875pt x 402.50375pt>
+<stack_prog.jpg, id=11, 543.02875pt x 379.4175pt>
 File: stack_prog.jpg Graphic file (type jpg)
  <use stack_prog.jpg>
-Overfull \hbox (22.64256pt too wide) in paragraph at lines 78--79
+Overfull \hbox (22.64256pt too wide) in paragraph at lines 80--81
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 81--81
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 []\OT1/cmr/m/n/10 When this sub-rou-tine re-turns the ad-dress
  []
 
 [2 <./stack_normal.jpg> <./stack_prog.jpg>]
-<rop.jpg, id=16, 575.14874pt x 576.1525pt>
+<rop.jpg, id=16, 575.14874pt x 531.9875pt>
 File: rop.jpg Graphic file (type jpg)
  <use rop.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
-[]
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 93--93
+[] [] 
  []
 
 [3 <./rop.jpg>] [4]
-Underfull \hbox (badness 5519) in paragraph at lines 110--111
+Underfull \hbox (badness 5519) in paragraph at lines 114--115
 []\OT1/cmr/m/n/10 Several meth-ods to pre-vent ad-dress leak-age
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
 []\OT1/cmr/bx/n/14.4 Advanced Of-fen-sive and
  []
 
 
-Underfull \hbox (badness 7186) in paragraph at lines 113--114
+Underfull \hbox (badness 7186) in paragraph at lines 117--118
 \OT1/cmr/m/n/10 Although many de-fen-sive so-lu-tions have been
  []
 
 
-Overfull \hbox (10.06242pt too wide) in paragraph at lines 117--117
+Overfull \hbox (10.06242pt too wide) in paragraph at lines 121--121
 []\OT1/cmr/bx/n/12 Just-In-Time Code Reuse(Offensive) 
  []
 
 [5]
-Underfull \hbox (badness 7081) in paragraph at lines 137--138
+Underfull \hbox (badness 7081) in paragraph at lines 141--142
 []\OT1/cmr/m/n/10 This ap-proach has been pro-posed spe-cially
  []
 
 
-Underfull \hbox (badness 6592) in paragraph at lines 147--148
+Underfull \hbox (badness 6592) in paragraph at lines 151--152
 \OT1/cmr/m/n/10 with these in-struc-tions are in-stru-mented with
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 []\OT1/cmr/m/n/10 G-Free re-moves all un-aligned free-branch
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 \OT1/cmr/m/n/10 The fol-low-ing ex-am-ple is per-formed just to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 \OT1/cmr/m/n/10 show the work-ing of ROP at-tack. Tool
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 154--155
+Underfull \hbox (badness 6001) in paragraph at lines 158--159
 \OT1/cmr/m/n/10 Per-formed on Ubuntu 12.04 LTS, with stack
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 \OT1/cmr/m/n/10 ca-nary pro-tec-tion and ASLR turned off.
  []
 
 
-Underfull \hbox (badness 6016) in paragraph at lines 154--155
+Underfull \hbox (badness 6016) in paragraph at lines 158--159
 \OT1/cmr/m/n/10 flag \OT1/cmr/m/it/10 -fno-stack-protector \OT1/cmr/m/n/10 whil
 e com-pi-la-tion and,
  []
 
-<vul_prog.jpg, id=31, 786.94pt x 311.1625pt>
+<vul_prog.jpg, id=31, 786.94pt x 249.93375pt>
 File: vul_prog.jpg Graphic file (type jpg)
  <use vul_prog.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
-
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 163--163
+[] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
-
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
+[] \OT1/cmr/m/n/10 The pro-gram con-tains a buffer over-flow
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
-
- []
-
-<ex_prog.jpg, id=32, 543.02875pt x 402.50375pt>
+<ex_prog.jpg, id=32, 543.02875pt x 379.4175pt>
 File: ex_prog.jpg Graphic file (type jpg)
  <use ex_prog.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
+Underfull \hbox (badness 10000) in paragraph at lines 167--171
 \OT1/cmr/m/n/10 "\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 xb0\OMS/cmsy/m/n/10 n\OT1/cm
 r/m/n/10 xf1\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 xfd\OMS/cmsy/m/n/10 n\OT1/cmr/m/n
 /10 xb7"'` 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
-[]
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 171--171
+[] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
-
- []
-
-
-Overfull \hbox (2.92833pt too wide) in paragraph at lines 168--168
+Overfull \hbox (2.92833pt too wide) in paragraph at lines 174--174
 []\OT1/cmr/bx/n/14.4 Proposed De-fen-sive Tech-nique 
  []
 
 [7 <./vul_prog.jpg> <./ex_prog.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-<phase1.png, id=38, 504.88625pt x 242.9075pt>
+<phase1.png, id=38, 504.88625pt x 202.7575pt>
 File: phase1.png Graphic file (type png)
  <use phase1.png>
-Overfull \hbox (18.72438pt too wide) in paragraph at lines 177--179
-[]
+Overfull \hbox (18.72438pt too wide) in paragraph at lines 183--184
+[] 
  []
 
-<phase2.png, id=39, 417.56pt x 308.15125pt>
+
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 184--184
+[] [] 
+ []
+
+<phase2.png, id=39, 417.56pt x 244.915pt>
 File: phase2.png Graphic file (type png)
  <use phase2.png>
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
-[]
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 189--189
+[] [] 
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 185--186
+Underfull \hbox (badness 5260) in paragraph at lines 193--194
 \OT1/cmr/m/n/10 The ap-proach is im-ple-mented only for of-fline
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 185--186
+Underfull \hbox (badness 6995) in paragraph at lines 193--194
 \OT1/cmr/m/n/10 pur-pose for the se-cu-rity of the stored files.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 \OT1/cmr/m/n/10 so that no of-fline dis-clo-sure of gad-gets is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 \OT1/cmr/m/n/10 12.04 LTS us-ing gcc 4.6.3 com-piler. 
  []
 
 [8 <./phase1.png (PNG copy)> <./phase2.png (PNG copy)>]
-<locations.png, id=43, 425.59pt x 155.58125pt>
+<locations.png, id=43, 425.59pt x 108.405pt>
 File: locations.png Graphic file (type png)
  <use locations.png>
-<data.jpg, id=45, 389.455pt x 151.56625pt>
+Underfull \hbox (badness 10000) in paragraph at lines 199--201
+
+ []
+
+
+Overfull \hbox (0.3571pt too wide) in paragraph at lines 199--201
+[] 
+ []
+
+
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 201--201
+[] [] 
+ []
+
+<data.jpg, id=45, 389.455pt x 111.41624pt>
 File: data.jpg Graphic file (type jpg)
  <use data.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 191--196
+Underfull \hbox (badness 10000) in paragraph at lines 202--204
 
  []
 
 
-Overfull \hbox (0.3571pt too wide) in paragraph at lines 191--196
-[]
+Overfull \hbox (21.14148pt too wide) in paragraph at lines 204--204
+[] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--196
+Package caption Warning: \captionsetup{type*=...} or \captionof
+(caption)                outside box or environment on input line 231.
+See the caption package documentation for explanation.
 
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--196
-[]
+Overfull \hbox (2.2424pt too wide) in paragraph at lines 220--231
+[][] 
  []
 
 [9 <./locations.png> <./data.jpg>] (./me-mid-term-report-template.bbl
@@ -373,7 +402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--73
 \OT1/cmr/m/n/10 Grace, and Sina Bahram.  De-feat-ing
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 108--111
 []\OT1/cmr/m/n/10 Arpan Gupta, Jalal Habibi, Michael S
  []
@@ -388,15 +417,15 @@ Underfull \hbox (badness 7344) in paragraph at lines 108--111
 \OT1/cmr/m/n/10 Mit-i-gat-ing code reuse at-tacks us-ing code
  []
 
-) [10] (./me-mid-term-report-template.aux) ) 
+) [11] (./me-mid-term-report-template.aux) ) 
 Here is how much of TeX's memory you used:
- 1125 strings out of 495061
- 14531 string characters out of 1182621
- 84054 words of memory out of 3000000
- 4323 multiletter control sequences out of 15000+50000
+ 2108 strings out of 495061
+ 31756 string characters out of 1182621
+ 100028 words of memory out of 3000000
+ 5298 multiletter control sequences out of 15000+50000
  8848 words of font info for 31 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,6n,19p,1748b,250s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,9n,38p,1798b,319s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
@@ -406,9 +435,9 @@ exmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive
 /fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
 onts/cm/cmti10.pfb>
-Output written on me-mid-term-report-template.pdf (10 pages, 480011 bytes).
+Output written on me-mid-term-report-template.pdf (11 pages, 378580 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
